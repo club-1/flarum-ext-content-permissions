@@ -1,7 +1,32 @@
+/*
+ * This file is part of club-1/flarum-ext-content-permissions.
+ *
+ * Copyright (c) 2025 Nicolas Peugnet <nicolas@club1.fr>.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 import app from 'flarum/admin/app';
 
-export { default as extend } from './extend';
-
 app.initializers.add('club-1-content-permissions', () => {
-  console.log('[club-1/flarum-ext-content-permissions] Hello, admin!');
+    app.extensionData
+        .for('club-1-content-permissions')
+        .registerPermission({
+            icon: 'fas fa-link',
+            label: app.translator.trans('club-1-content-permissions.admin.permissions.followedLinks_label'),
+            permission: 'post.club-1-content-permissions.followedLinks',
+        }, 'start')
 });

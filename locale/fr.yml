@@ -3,4 +3,4 @@ club-1-content-permissions:
   # Checkout https://docs.flarum.org/2.x/extend/i18n/#appendix-a-standard-key-format
   admin:
     permissions:
-      followedLinks_label: Allow bots to follow posted links
+      followedLinks_label: Autoriser les robots à suivre les liens postés

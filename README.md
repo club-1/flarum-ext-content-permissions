@@ -2,7 +2,9 @@
 
 ![License](https://img.shields.io/badge/license-AGPL-3.0-or-later-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/club-1/flarum-ext-content-permissions.svg)](https://packagist.org/packages/club-1/flarum-ext-content-permissions) [![Total Downloads](https://img.shields.io/packagist/dt/club-1/flarum-ext-content-permissions.svg)](https://packagist.org/packages/club-1/flarum-ext-content-permissions)
 
-A [Flarum](https://flarum.org) extension. Add group permissions for post content related features.
+A [Flarum](https://flarum.org) extension. Add group permissions for post content related features:
+
+- Allow bots to follow posted links (remove `nofollow ugc` from `rel` attribute)
 
 ## Installation
 
