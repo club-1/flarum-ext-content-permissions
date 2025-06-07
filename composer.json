@@ -26,9 +26,9 @@
             "title": "Content Permissions",
             "category": "",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-edit",
+                "backgroundColor": "#a83297",
+                "color": "#fff"
             }
         },
         "flarum-cli": {
