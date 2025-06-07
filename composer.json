@@ -1,0 +1,67 @@
+{
+    "name": "club-1/flarum-ext-content-permissions",
+    "description": "Add group permissions for post content related features.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "flarum/core": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Nicolas Peugnet",
+            "email": "nicolas@club1.fr",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Club1\\ContentPermissions\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Content Permissions",
+            "category": "",
+            "icon": {
+                "name": "",
+                "color": "",
+                "backgroundColor": ""
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": false,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": false,
+                "typescript": true,
+                "bundlewatch": false,
+                "frontendTesting": false,
+                "backendTesting": false,
+                "phpstan": true,
+                "editorConfig": false,
+                "styleci": false
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis"
+    },
+    "require-dev": {
+        "flarum/phpstan": "^2.0"
+    }
+}
