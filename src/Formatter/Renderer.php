@@ -44,7 +44,11 @@ class Renderer
         if (!($context instanceof Post)) {
             return $xml;
         }
-        if ($context->user->can('post.club-1-content-permissions.followedLinks')) {
+        $user = $context->user;
+        if (is_null($user)) {
+            return $xml;
+        }
+        if ($user->can('post.club-1-content-permissions.followedLinks')) {
             $xml = Utils::replaceAttributes($xml, 'URL', function ($attributes) {
                 $attributes['rel'] = '';
                 return $attributes;
