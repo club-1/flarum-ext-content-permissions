@@ -11,7 +11,7 @@ dev: js vendor;
 js:
 	$(MAKE) -C $@ $(filter $(JSPHONY),$(MAKECMDGOALS))
 
-vendor: composer.json composer.lock
+vendor: composer.json
 	composer install
 	touch $@
 
