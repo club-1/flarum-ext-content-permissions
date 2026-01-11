@@ -65,7 +65,13 @@
     "scripts-descriptions": {
         "analyse:phpstan": "Run static analysis"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:n-peugnet/phpstan.git"
+        }
+    ],
     "require-dev": {
-        "flarum/phpstan": "^1.0"
+        "flarum/phpstan": "dev-main"
     }
 }
