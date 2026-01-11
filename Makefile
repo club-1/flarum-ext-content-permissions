@@ -32,15 +32,14 @@ releasepatch releaseminor releasemajor: release%: .confirm check all
 	git tag $(TAG)
 	git push --tags
 
-check: js analyse test;
+check: js analyse;
 
 analyse: js analysephp;
 
 analysephp: vendor
 	vendor/bin/phpstan analyse $(PHPSTANFLAGS)
 
-test: testunit;
-#test: testunit testintegration;
+test: testunit testintegration;
 
 testunit testintegration: export XDEBUG_MODE=coverage
 testunit testintegration: test%: vendor
